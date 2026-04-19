@@ -7,7 +7,7 @@ import { fadeLeft, fadeRight, fadeUp } from "@/lib/animations";
 const StandortDeutschland = () => (
   <PageLayout>
     <PageHero title="Standort Deutschland" subtitle="Unsere Standorte in Deutschland" />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Hauptsitz */}
         <div className="mb-20 max-w-5xl">

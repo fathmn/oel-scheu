@@ -37,7 +37,7 @@ const Historie = () => {
   return (
     <PageLayout>
       <PageHero title="Unsere Historie" subtitle="Über 60 Jahre Erfahrung im Schmierstoffhandel" />
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div ref={containerRef} className="max-w-3xl mx-auto relative">
             {/* Grey spine */}

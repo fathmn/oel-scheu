@@ -30,7 +30,7 @@ const ProductPageTemplate = ({
   return (
     <PageLayout>
       <PageHero title={title} subtitle={subtitle} image={heroImage} />
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"

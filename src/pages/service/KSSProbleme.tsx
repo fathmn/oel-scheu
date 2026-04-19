@@ -37,7 +37,7 @@ const KSSProbleme = () => (
       title="Probleme mit KSS?"
       subtitle="Wir finden die Lösung für Ihre Kühlschmierstoff-Herausforderungen"
     />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-5xl">
           <div className="grid md:grid-cols-2 gap-8 mb-16">

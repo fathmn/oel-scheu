@@ -7,7 +7,7 @@ import { fadeLeft, fadeRight } from "@/lib/animations";
 const StandortSchweiz = () => (
   <PageLayout>
     <PageHero title="Standort Schweiz" subtitle="Unser Schweizer Standort in Wil / SG" />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-[auto_1fr] gap-12">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeLeft} className="md:w-[360px]">

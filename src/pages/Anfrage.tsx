@@ -25,7 +25,7 @@ const Anfrage = () => {
     return (
       <PageLayout>
         <PageHero title="Anfrage gesendet" subtitle="Vielen Dank für Ihre Anfrage" />
-        <section className="py-16 md:py-24">
+        <section className="pt-8 pb-16 md:py-24">
           <div className="container mx-auto px-4 lg:px-8">
             <motion.div initial="hidden" animate="show" variants={fadeUp} className="bg-green-50 border border-green-200 p-6 sm:p-10 max-w-2xl">
               <CheckCircle2 className="w-12 h-12 text-green-600 mb-6" />

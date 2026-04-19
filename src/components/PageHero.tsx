@@ -7,7 +7,7 @@ interface PageHeroProps {
 }
 
 const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
-  <section className="relative bg-industrial overflow-hidden min-h-[180px] md:min-h-[340px] flex items-center">
+  <section className="relative bg-industrial overflow-hidden min-h-[180px] md:min-h-[340px] flex items-center -mb-px">
     {image && (
       <div className="absolute inset-0">
         <img src={image} alt="" className="w-full h-full object-cover opacity-20" />

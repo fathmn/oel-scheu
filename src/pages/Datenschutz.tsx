@@ -6,7 +6,7 @@ import { fadeUp } from "@/lib/animations";
 const Datenschutz = () => (
   <PageLayout>
     <PageHero title="Datenschutzerklärung" />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
       <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="max-w-3xl prose prose-sm">
         <h2>1. Datenschutz auf einen Blick</h2>

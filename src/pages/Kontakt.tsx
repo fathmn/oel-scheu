@@ -15,7 +15,7 @@ const Kontakt = () => {
   return (
     <PageLayout>
       <PageHero title="Kontakt" subtitle="Wir freuen uns auf Ihre Nachricht" />
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 max-w-5xl">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeLeft}>

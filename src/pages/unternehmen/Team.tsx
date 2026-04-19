@@ -60,7 +60,7 @@ const TeamSection = ({ team, direction }: { team: typeof teamDE; direction: "lef
 const Team = () => (
   <PageLayout>
     <PageHero title="Unser Team" subtitle="Die Menschen hinter Oel-Scheu" />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial="hidden"

@@ -20,7 +20,7 @@ const FluidManagementService = () => (
       subtitle="Fluidmanagement mit Biobalance!"
       image="/images/Filter-Slider-scheu-13-Fluid_Management-2024.jpg"
     />
-    <section className="py-16 md:py-24">
+    <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial="hidden"
