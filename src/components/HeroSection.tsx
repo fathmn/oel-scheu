@@ -39,6 +39,7 @@ const HeroSection = () => (
         <path d="M0,88 C180,52 300,98 480,72 C660,44 780,88 960,74 C1140,58 1260,42 1440,68 L1440,120 L0,120 Z" fill="url(#hero-oil-grad)" />
         <path d="M0,96 C200,72 400,104 600,86 C800,66 1000,96 1200,82 C1320,74 1400,90 1440,86 L1440,120 L0,120 Z" fill="#ffffff" />
       </svg>
+      <div className="h-1 bg-white" />
     </div>
 
     <div className="container relative z-10 mx-auto px-4 lg:px-8 py-12 lg:py-20">

@@ -7,7 +7,7 @@ interface PageHeroProps {
 }
 
 const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
-  <section className="relative bg-industrial overflow-hidden min-h-[180px] md:min-h-[340px] flex items-center -mb-px">
+  <section className="relative bg-industrial overflow-hidden min-h-[180px] md:min-h-[340px] flex items-center">
     {image && (
       <div className="absolute inset-0">
         <img src={image} alt="" className="w-full h-full object-cover opacity-20" />
@@ -17,7 +17,6 @@ const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
     {!image && (
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.04)_0%,_transparent_60%)]" />
     )}
-    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
     <div className="relative container mx-auto px-4 lg:px-8 pt-20 pb-14 md:pt-24 md:pb-28">
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
@@ -38,13 +37,16 @@ const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
         </motion.p>
       )}
     </div>
-    <svg
-      viewBox="0 0 1440 60"
-      className="absolute bottom-0 left-0 w-full h-auto block"
-      preserveAspectRatio="none"
-    >
-      <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="white" />
-    </svg>
+    <div className="absolute bottom-0 left-0 right-0">
+      <svg
+        viewBox="0 0 1440 60"
+        className="w-full h-auto block"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="white" />
+      </svg>
+      <div className="h-1 bg-white" />
+    </div>
   </section>
 );
 
