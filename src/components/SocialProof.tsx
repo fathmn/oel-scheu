@@ -42,7 +42,7 @@ const SocialProof = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold text-center mb-14"
+        className="text-3xl md:text-4xl font-bold mb-14"
       >
         Qualität und Partnerschaft seit 1965
       </motion.h2>
@@ -58,12 +58,12 @@ const SocialProof = () => (
             key={item.title}
             variants={card}
             whileHover={{ y: -6, boxShadow: "0 12px 24px -8px rgba(0,0,0,0.1)" }}
-            className="bg-card rounded-lg p-6 border border-border text-center cursor-default"
+            className="bg-card rounded-lg p-6 border border-border cursor-default"
           >
             <motion.div
               whileHover={{ rotate: [0, -8, 8, 0] }}
               transition={{ duration: 0.4 }}
-              className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4"
+              className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
             >
               <item.icon className="w-8 h-8 text-primary" />
             </motion.div>

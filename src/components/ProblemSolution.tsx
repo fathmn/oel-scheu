@@ -24,7 +24,7 @@ const ProblemSolution = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="mb-14"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Schmierstoffe beeinflussen Ihre Produktivität
@@ -33,7 +33,7 @@ const ProblemSolution = () => (
         </h2>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-10">
         {/* Problems */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -79,7 +79,7 @@ const ProblemSolution = () => (
         </motion.div>
       </div>
 
-      <div className="text-center mt-12">
+      <div className="mt-12">
         <a
           href="#kontakt"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-md text-base font-semibold hover:bg-primary/90 transition-colors"

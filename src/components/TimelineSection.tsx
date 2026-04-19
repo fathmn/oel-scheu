@@ -33,7 +33,7 @@ const TimelineSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="mb-14"
         >
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">
             Historie
@@ -41,7 +41,7 @@ const TimelineSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Über 58 Jahre <span className="text-primary">Tradition & Innovation</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl">
             Von der Gründung 1965 bis zur 3. Generation – ein Familienunternehmen mit Weitblick.
           </p>
         </motion.div>

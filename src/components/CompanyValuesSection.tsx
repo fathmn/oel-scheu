@@ -42,7 +42,7 @@ const CompanyValuesSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="mb-14"
       >
         <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">
           Unternehmensleitbild
@@ -50,12 +50,12 @@ const CompanyValuesSection = () => (
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Was uns <span className="text-primary">auszeichnet</span>
         </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl">
           Unser Antrieb: Qualität, Partnerschaft und technische Exzellenz.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {values.map((v, i) => (
           <motion.div
             key={v.title}
@@ -81,7 +81,7 @@ const CompanyValuesSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-14 max-w-6xl mx-auto rounded-2xl overflow-hidden"
+        className="mt-14 rounded-2xl overflow-hidden"
       >
         <img src={lagerImg} alt="Oel-Scheu Lagerhalle mit Schmierstoff-Fässern" className="w-full h-56 md:h-72 object-cover" />
       </motion.div>

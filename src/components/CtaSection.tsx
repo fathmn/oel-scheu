@@ -9,7 +9,7 @@ const CtaSection = () => (
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative max-w-3xl mx-auto text-center bg-industrial rounded-2xl p-10 md:p-16 overflow-hidden"
+        className="relative max-w-3xl mx-auto text-center bg-industrial rounded-2xl p-6 sm:p-10 md:p-16 overflow-hidden"
       >
         {/* Animated glow accent */}
         <motion.div

@@ -68,11 +68,11 @@ const logos = [
 ];
 
 const LogoTicker = () => (
-  <section className="py-14 bg-surface">
+  <section className="py-14 bg-white">
     <div className="container mx-auto px-4 lg:px-8">
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 overflow-hidden">
         {/* Left: Text (1/3) */}
-        <div className="lg:w-1/3 text-center lg:text-left shrink-0">
+        <div className="lg:w-1/3 shrink-0">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-3">
             Partner & Lieferanten
           </span>
@@ -85,10 +85,10 @@ const LogoTicker = () => (
         </div>
 
         {/* Right: Logo Marquee (2/3) */}
-        <div className="lg:w-2/3 relative overflow-hidden">
+        <div className="w-full lg:w-2/3 relative overflow-hidden">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
 
           <div className="flex animate-marquee">
             {[...logos, ...logos].map((logo, i) => (

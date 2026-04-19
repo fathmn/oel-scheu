@@ -46,7 +46,7 @@ const ProcessSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-14"
+        className="mb-14"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-industrial-foreground mb-4">
           So arbeiten wir mit Ihnen zusammen
@@ -61,7 +61,7 @@ const ProcessSection = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         {steps.map((s, i) => (
           <motion.div

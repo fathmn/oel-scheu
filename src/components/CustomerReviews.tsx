@@ -45,7 +45,7 @@ const CustomerReviews = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="mb-14"
       >
         <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4">
           Kundenstimmen
@@ -53,7 +53,7 @@ const CustomerReviews = () => (
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-industrial-foreground">
           Was unsere <span className="text-accent">Kunden sagen</span>
         </h2>
-        <p className="text-industrial-foreground/70 text-lg max-w-2xl mx-auto">
+        <p className="text-industrial-foreground/70 text-lg max-w-2xl">
           Langfristige Partnerschaften basieren auf Vertrauen und messbaren Ergebnissen.
         </p>
       </motion.div>
@@ -63,7 +63,7 @@ const CustomerReviews = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+        className="grid md:grid-cols-2 gap-6"
       >
         {reviews.map((review) => (
           <motion.div

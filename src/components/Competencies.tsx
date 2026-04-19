@@ -52,12 +52,12 @@ const Competencies = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-14"
+        className="mb-14"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Unsere Kompetenzbereiche
         </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg max-w-2xl">
           Schmierstoffe & Dienstleistungen
         </p>
       </motion.div>
@@ -67,7 +67,7 @@ const Competencies = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {areas.map((area) => (
           <motion.div

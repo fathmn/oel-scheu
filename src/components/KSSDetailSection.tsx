@@ -33,18 +33,18 @@ const features = [
 const KSSDetailSection = () => (
   <section className="py-20 lg:py-28 bg-background">
     <div className="container mx-auto px-4 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div>
         {/* Hero image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-12 rounded-2xl overflow-hidden max-w-6xl mx-auto"
+          className="mb-12 rounded-2xl overflow-hidden"
         >
           <img src={kssImg} alt="CNC-Maschine mit Kühlschmierstoff" className="w-full h-64 md:h-80 object-cover" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left: editorial text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

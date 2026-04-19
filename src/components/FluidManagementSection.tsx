@@ -23,8 +23,8 @@ const FluidManagementSection = () => (
     />
 
     <div className="container relative z-10 mx-auto px-4 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image side */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

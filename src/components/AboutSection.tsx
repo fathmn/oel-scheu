@@ -6,7 +6,7 @@ import facilityImg from "@/assets/facility.png";
 const AboutSection = () => (
   <section id="ueber-uns" className="py-20 lg:py-28 bg-surface">
     <div className="container mx-auto px-4 lg:px-8">
-      <div className="grid lg:grid-cols-2 gap-14 items-start max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
