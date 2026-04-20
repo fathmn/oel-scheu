@@ -3,7 +3,7 @@ import { Handshake } from "lucide-react";
 import trucksImg from "@/assets/trucks.png";
 
 const Testimonials = () => (
-  <section className="py-20 lg:py-28">
+  <section className="py-10 md:py-20 lg:py-28">
     <div className="container mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div

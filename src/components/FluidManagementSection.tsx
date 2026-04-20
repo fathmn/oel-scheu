@@ -11,7 +11,7 @@ const benefits = [
 ];
 
 const FluidManagementSection = () => (
-  <section className="py-20 lg:py-28 bg-industrial relative overflow-hidden">
+  <section className="py-10 md:py-20 lg:py-28 bg-industrial relative overflow-hidden">
     {/* Subtle pattern */}
     <div
       className="absolute inset-0 opacity-[0.03]"

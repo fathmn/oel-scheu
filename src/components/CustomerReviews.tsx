@@ -39,13 +39,13 @@ const card = {
 };
 
 const CustomerReviews = () => (
-  <section className="py-20 lg:py-28 bg-industrial text-industrial-foreground">
+  <section className="py-10 md:py-20 lg:py-28 bg-industrial text-industrial-foreground">
     <div className="container mx-auto px-4 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-14"
+        className="mb-8 md:mb-14"
       >
         <span className="inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-4">
           Kundenstimmen

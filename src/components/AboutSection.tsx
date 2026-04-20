@@ -4,7 +4,7 @@ import teamImg from "@/assets/team.png";
 import facilityImg from "@/assets/facility.png";
 
 const AboutSection = () => (
-  <section id="ueber-uns" className="py-20 lg:py-28 bg-surface">
+  <section id="ueber-uns" className="py-10 md:py-20 lg:py-28 bg-surface">
     <div className="container mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
         <motion.div

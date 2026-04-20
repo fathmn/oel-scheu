@@ -37,7 +37,7 @@ const ProductPageTemplate = ({
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="max-w-4xl mb-14"
+            className="max-w-4xl mb-8 md:mb-14"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">{intro}</p>
           </motion.div>

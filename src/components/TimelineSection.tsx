@@ -27,13 +27,13 @@ const TimelineSection = () => {
   const beamHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section className="py-10 md:py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-14"
+          className="mb-8 md:mb-14"
         >
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-4">
             Historie

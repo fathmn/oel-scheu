@@ -35,7 +35,7 @@ const step = {
 };
 
 const ProcessSection = () => (
-  <section id="ablauf" className="bg-industrial py-20 lg:py-28 relative overflow-hidden">
+  <section id="ablauf" className="bg-industrial py-10 md:py-20 lg:py-28 relative overflow-hidden">
     {/* Background image overlay */}
     <div className="absolute inset-0 z-0">
       <img src={beratungImg} alt="" className="w-full h-full object-cover opacity-10" />
@@ -46,7 +46,7 @@ const ProcessSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-14"
+        className="mb-8 md:mb-14"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-industrial-foreground mb-4">
           So arbeiten wir mit Ihnen zusammen
