@@ -41,11 +41,11 @@ const Historie = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div ref={containerRef} className="max-w-3xl mx-auto relative">
             {/* Grey spine */}
-            <div className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
+            <div className="absolute left-[7px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
             {/* Scroll-driven red beam */}
             <motion.div
               style={{ height: beamHeight }}
-              className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
+              className="absolute left-[7px] md:left-1/2 md:-translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
             />
 
             {milestones.map((m, i) => (
@@ -59,11 +59,11 @@ const Historie = () => {
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                <div className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-1.5 z-10">
+                <div className="absolute left-[2px] md:left-1/2 md:-translate-x-1/2 top-1.5 z-10">
                   <div className="w-3 h-3 rounded-full bg-primary border-2 border-background" />
                 </div>
 
-                <div className={`ml-12 md:ml-0 md:w-[45%] ${i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10"}`}>
+                <div className={`ml-8 md:ml-0 md:w-[45%] ${i % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10"}`}>
                   <span className="text-primary font-bold text-lg">{m.year}</span>
                   <p className="text-sm text-muted-foreground leading-relaxed mt-1">{m.text}</p>
                 </div>

@@ -68,7 +68,7 @@ const logos = [
 ];
 
 const LogoTicker = () => (
-  <section className="py-14 bg-white">
+  <section className="py-14 bg-white overflow-hidden">
     <div className="container mx-auto px-4 lg:px-8">
       <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 overflow-hidden">
         {/* Left: Text (1/3) */}

@@ -15,7 +15,7 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
       <main className="flex-1 pt-20">{children}</main>
       <FluidWave fromColor={BG} toColor={DARK} accent={false} size="md" />
