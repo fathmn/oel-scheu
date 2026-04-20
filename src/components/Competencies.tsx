@@ -67,7 +67,7 @@ const Competencies = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
         {areas.map((area) => (
           <motion.div
