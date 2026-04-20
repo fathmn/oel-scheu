@@ -48,12 +48,12 @@ const TimelineSection = () => {
 
         <div ref={containerRef} className="max-w-3xl mx-auto relative">
           {/* Grey background line */}
-          <div className="absolute left-[23.5px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
+          <div className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
 
           {/* Red beam – scroll-driven overlay */}
           <motion.div
             style={{ height: beamHeight }}
-            className="absolute left-[23.5px] md:left-1/2 -translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
+            className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
           />
 
           {events.map((e, i) => (
