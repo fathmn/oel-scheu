@@ -49,7 +49,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-industrial-foreground leading-[1.1] mb-5 tracking-tight"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-industrial-foreground leading-[1.1] mb-5 tracking-tight"
         >
           Kühlschmierstoffe &{" "}
           <span className="text-accent">Prozessoptimierung</span>{" "}
@@ -61,7 +61,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-industrial-foreground/80 mb-8 leading-relaxed"
+          className="text-sm sm:text-lg md:text-xl text-industrial-foreground/80 mb-8 leading-relaxed"
         >
           Seit 1965 Ihr Partner für KSS, Fette und Öle – mit technischer
           Beratung und messbarem Mehrwert für Ihre Produktion.
@@ -97,14 +97,14 @@ const HeroSection = () => (
         >
           <a
             href="#kontakt"
-            className="group inline-flex items-center justify-center gap-2.5 bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
           >
             Beratungsgespräch vereinbaren
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="tel:+4974452560"
-            className="inline-flex items-center justify-center gap-2.5 border border-industrial-foreground/25 text-industrial-foreground px-8 py-4 rounded-lg text-base font-medium hover:bg-industrial-foreground/10 transition-all backdrop-blur-sm hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 border border-industrial-foreground/25 text-industrial-foreground px-5 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base font-medium hover:bg-industrial-foreground/10 transition-all backdrop-blur-sm hover:-translate-y-0.5"
           >
             <Phone className="w-5 h-5" />
             Jetzt Kontakt aufnehmen

@@ -41,11 +41,11 @@ const Historie = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div ref={containerRef} className="max-w-3xl mx-auto relative">
             {/* Grey spine */}
-            <div className="absolute left-[23.5px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
+            <div className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
             {/* Scroll-driven red beam */}
             <motion.div
               style={{ height: beamHeight }}
-              className="absolute left-[23.5px] md:left-1/2 -translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
+              className="absolute left-[17.5px] md:left-1/2 -translate-x-1/2 top-0 w-0.5 bg-primary origin-top z-[1]"
             />
 
             {milestones.map((m, i) => (

@@ -57,18 +57,16 @@ const SocialProof = () => (
           <motion.div
             key={item.title}
             variants={card}
-            whileHover={{ y: -6, boxShadow: "0 12px 24px -8px rgba(0,0,0,0.1)" }}
-            className="bg-card rounded-lg p-6 border border-border cursor-default"
+            whileHover={{ y: -5, boxShadow: "0 16px 32px -12px rgba(0,0,0,0.1)" }}
+            className="flex gap-4 bg-card rounded-xl p-5 border border-border hover:border-primary/20 transition-colors cursor-default group"
           >
-            <motion.div
-              whileHover={{ rotate: [0, -8, 8, 0] }}
-              transition={{ duration: 0.4 }}
-              className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
-            >
-              <item.icon className="w-8 h-8 text-primary" />
-            </motion.div>
-            <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-            <p className="text-sm text-muted-foreground">{item.text}</p>
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <item.icon className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="font-semibold mb-1">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">{item.text}</p>
+            </div>
           </motion.div>
         ))}
       </motion.div>

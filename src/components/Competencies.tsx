@@ -74,18 +74,17 @@ const Competencies = () => (
             key={area.title}
             variants={card}
             whileHover={{ y: -5, boxShadow: "0 16px 32px -12px rgba(0,0,0,0.1)" }}
-            className="bg-card rounded-xl p-7 border border-border hover:border-primary/30 transition-colors duration-300 group cursor-default"
+            className="flex gap-4 bg-card rounded-xl p-5 border border-border hover:border-primary/20 transition-colors duration-300 group cursor-default"
           >
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors"
-            >
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
               <area.icon className="w-5 h-5 text-primary" />
-            </motion.div>
-            <h3 className="font-semibold text-lg mb-2">{area.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {area.text}
-            </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-1">{area.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {area.text}
+              </p>
+            </div>
           </motion.div>
         ))}
       </motion.div>
