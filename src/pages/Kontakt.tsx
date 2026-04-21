@@ -4,12 +4,20 @@ import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 import { MapPin, Phone, Mail, Clock, Linkedin, Send } from "lucide-react";
 import { fadeLeft, fadeRight } from "@/lib/animations";
+import { createContactDraftHref } from "@/lib/mailto";
 
 const Kontakt = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [draftOpened, setDraftOpened] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setDraftOpened(true);
+    window.location.href = createContactDraftHref(form);
   };
 
   return (
@@ -85,7 +93,7 @@ const Kontakt = () => {
 
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeRight}>
               <h2 className="font-heading text-2xl font-bold mb-8">Nachricht senden</h2>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1.5">Name *</label>
@@ -105,11 +113,11 @@ const Kontakt = () => {
                     <label htmlFor="subject" className="block text-sm font-medium mb-1.5">Betreff *</label>
                     <select id="subject" name="subject" required value={form.subject} onChange={handleChange} className="w-full border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
                       <option value="">Bitte wählen...</option>
-                      <option value="beratung">Beratungsgespräch</option>
-                      <option value="produkt">Produktanfrage</option>
-                      <option value="service">Service-Anfrage</option>
-                      <option value="bewerbung">Bewerbung</option>
-                      <option value="sonstiges">Sonstiges</option>
+                      <option value="Beratungsgespräch">Beratungsgespräch</option>
+                      <option value="Produktanfrage">Produktanfrage</option>
+                      <option value="Service-Anfrage">Service-Anfrage</option>
+                      <option value="Bewerbung">Bewerbung</option>
+                      <option value="Sonstiges">Sonstiges</option>
                     </select>
                   </div>
                 </div>
@@ -118,8 +126,20 @@ const Kontakt = () => {
                   <textarea id="message" name="message" required rows={6} value={form.message} onChange={handleChange} className="w-full border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none" />
                 </div>
                 <button type="submit" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90 transition-colors">
-                  <Send className="w-4 h-4" /> Nachricht senden
+                  <Send className="w-4 h-4" /> E-Mail vorbereiten
                 </button>
+                <p className="text-xs text-muted-foreground">
+                  Wir öffnen Ihr Mailprogramm mit einer vorausgefüllten Nachricht an{" "}
+                  <a href="mailto:info@oelscheu.de" className="font-medium text-foreground hover:text-primary transition-colors">
+                    info@oelscheu.de
+                  </a>
+                  .
+                </p>
+                {draftOpened && (
+                  <p className="rounded-md border border-green-200 bg-green-50 px-3 py-2 text-sm text-green-800">
+                    Falls sich kein Mailprogramm geöffnet hat, schreiben Sie uns direkt an info@oelscheu.de.
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>

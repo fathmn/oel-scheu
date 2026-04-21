@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { fadeUp, staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const areas = [
   { title: "Stahlbau", text: "Schutz großer Flächen unter extremen Bedingungen. Robuste Schutzfilme gegen Feuchtigkeit, Sauerstoff und aggressive Medien." },
@@ -12,7 +13,7 @@ const Korrosionsschutz = () => (
   <ProductPageTemplate
     title="Korrosionsschutz"
     subtitle="Hochwirksame Lösungen für Stahl und Metall"
-    heroImage="/images/Filter-Slider-scheu-6-Korresionsschutz-2024.jpg"
+    heroImage={productImages.korrosionsschutz}
     intro="Unsere Korrosionsschutzmittel bilden einen robusten Schutzfilm, der Feuchtigkeit, Sauerstoff und aggressive Medien effektiv abwehrt. Von temporärem Zwischenschutz bis zur Langzeitkonservierung."
     cartItem={{ id: "korrosionsschutz", name: "Korrosionsschutz", category: "Produkte" }}
   >

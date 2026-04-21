@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard, fadeUp } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const products = [
   { name: "EcoFleece – Polypropylenvlies", variants: "APP 20 / APP 50" },
@@ -18,7 +19,7 @@ const Filtrationsprogramm = () => (
   <ProductPageTemplate
     title="Filtrationsprogramm"
     subtitle="Filtervliese und Filtrationssysteme"
-    heroImage="/images/Filter-Slider-scheu-3-4D-Filtervlies-2024.jpg"
+    heroImage={productImages.filtrationsprogramm}
     intro="Filtervliese trennen Feststoffe von Flüssigkeiten und reinigen Kühlschmierstoffe bei Bearbeitungsprozessen wie Schleifen, Fräsen, Drehen und Bohren."
     cartItem={{ id: "filtration", name: "Filtrationsprogramm", category: "Produkte" }}
   >

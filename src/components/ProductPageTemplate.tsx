@@ -25,7 +25,8 @@ const ProductPageTemplate = ({
   cartItem,
 }: ProductPageTemplateProps) => {
   const { addItem, removeItem, isInCart } = useInquiryCart();
-  const inCart = isInCart(cartItem.id);
+  const inquiryItem = cartItem.image || !heroImage ? cartItem : { ...cartItem, image: heroImage };
+  const inCart = isInCart(inquiryItem.id);
 
   return (
     <PageLayout>
@@ -60,7 +61,7 @@ const ProductPageTemplate = ({
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <button
-                  onClick={() => (inCart ? removeItem(cartItem.id) : addItem(cartItem))}
+                  onClick={() => (inCart ? removeItem(inquiryItem.id) : addItem(inquiryItem))}
                   className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-colors ${
                     inCart
                       ? "bg-green-600 text-white hover:bg-green-700"

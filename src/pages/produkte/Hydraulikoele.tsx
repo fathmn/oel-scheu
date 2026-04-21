@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard, fadeUp } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const products = [
   { name: "HLP 32", desc: "Für Systeme, die eine geringere Viskosität erfordern – geeignet bei niedrigeren Betriebstemperaturen oder schnelleren Zyklusanforderungen." },
@@ -17,7 +18,7 @@ const Hydraulikoele = () => (
   <ProductPageTemplate
     title="Hydrauliköle"
     subtitle="Leistungsstark und zuverlässig"
-    heroImage="/images/Filter-Slider-scheu-10-Hydraulikoel-2024.jpg"
+    heroImage={productImages.hydraulikoele}
     intro="Hydrauliköle reduzieren Reibung und Verschleiß, leiten Wärme ab und schützen vor Korrosion. Unser Sortiment deckt alle gängigen Viskositätsklassen und Anforderungsprofile ab."
     cartItem={{ id: "hydraulikoele", name: "Hydrauliköle", category: "Produkte" }}
   >

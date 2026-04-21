@@ -3,6 +3,7 @@ import PageLayout from "@/components/PageLayout";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 import { staggerContainer, fadeUpCard, fadeUp } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const services = [
   { title: "Biobalance-System", text: "Ein koordiniertes Gerätesystem hält Ihre KSS in optimaler, gesunder Balance und garantiert produktionsgerechte Qualität." },
@@ -18,7 +19,7 @@ const FluidManagementService = () => (
     <PageHero
       title="Fluid Management Service"
       subtitle="Fluidmanagement mit Biobalance!"
-      image="/images/Filter-Slider-scheu-13-Fluid_Management-2024.jpg"
+      image={productImages.fluidManagement}
     />
     <section className="pt-8 pb-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">

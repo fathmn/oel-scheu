@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { AlertTriangle, Shield } from "lucide-react";
 import { fadeUp, fadeLeft, fadeRight } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const categories = [
   { title: "Kohlenwasserstoffreiniger", text: "Entwickelt zur Entfernung organischer Verunreinigungen wie Fetten, Wachsen und Ölen." },
@@ -18,7 +19,7 @@ const Reiniger = () => (
   <ProductPageTemplate
     title="Reiniger"
     subtitle="Effektive Lösungen für Ihre Prozesse"
-    heroImage="/images/Filter-Slider-scheu-4-Reiniger.jpg"
+    heroImage={productImages.reiniger}
     intro="Unsere Reinigungsmittel bieten effektive Lösungen für die industrielle Reinigung. Von Kohlenwasserstoffreinigern bis zu wässrigen Systemen finden wir das optimale Produkt für Ihre Anwendung."
     cartItem={{ id: "reiniger", name: "Reiniger", category: "Produkte" }}
   >

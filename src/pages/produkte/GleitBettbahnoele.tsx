@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const features = [
   { title: "Präzise Maschinenbewegung", text: "Reduziert Reibung und Verschleiß bei gleichzeitig konsistenter, wartungsarmer Maschinenbewegung." },
@@ -13,7 +14,7 @@ const GleitBettbahnoele = () => (
   <ProductPageTemplate
     title="Gleit- & Bettbahnöle"
     subtitle="CGLP Schmierstoffe für Werkzeugmaschinen"
-    heroImage="/images/Filter-Slider-scheu-8-Bettbahnoele-2024.jpg"
+    heroImage={productImages.gleitBettbahnoele}
     intro="Hochwertige Schmierstoffe für Maschinenführungen. Unsere Gleit- und Bettbahnöle sorgen für präzise und wartungsarme Funktion Ihrer Werkzeugmaschinen in den Viskositätsgraden CGLP ISO-VG 32 bis 220."
     cartItem={{ id: "gleit-bettbahnoele", name: "Gleit- & Bettbahnöle", category: "Produkte" }}
   >

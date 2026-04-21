@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const salts = [
   { num: "01", title: "Nitriersalze", text: "Oberflächenhärtung durch Nitrieren für deutlich verbesserte Verschleißfestigkeit und Härte." },
@@ -14,7 +15,7 @@ const Waermebehandlung = () => (
   <ProductPageTemplate
     title="Wärmebehandlung"
     subtitle="Spezialchemische Salze für die Metallverarbeitung"
-    heroImage="/images/Filter-Slider-scheu-7-Haerteoele-2024.jpg"
+    heroImage={productImages.waermebehandlung}
     intro="Spezialisierte chemische Salze für die thermochemische Metallbehandlung. Qualität, Zuverlässigkeit und umweltbewusste Prozesse stehen im Mittelpunkt unseres Angebots."
     cartItem={{ id: "waermebehandlung", name: "Wärmebehandlung", category: "Produkte" }}
   >

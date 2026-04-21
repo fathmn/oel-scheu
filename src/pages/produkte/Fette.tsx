@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const types = [
   { title: "Abschmierfett", text: "Effektive Schmierung verlängert die Maschinenlebensdauer. Unsere Produkte bieten Haftung und Beständigkeit gegen Wasser und Temperaturschwankungen und reduzieren Wartungsintervalle und Betriebskosten." },
@@ -12,7 +13,7 @@ const Fette = () => (
   <ProductPageTemplate
     title="Fette"
     subtitle="Für höchste Ansprüche"
-    heroImage="/images/Filter-Slider-scheu-14-Fette-2024.jpg"
+    heroImage={productImages.fette}
     intro="Hochleistungsfette für Maschinen und Anlagen. Von Abschmierfetten über Wälzlagerfette bis hin zu Trennfetten für die Produktion – unser Sortiment deckt alle Anforderungen ab."
     cartItem={{ id: "fette", name: "Fette", category: "Produkte" }}
   >

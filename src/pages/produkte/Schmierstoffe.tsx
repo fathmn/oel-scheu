@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const categories = [
   { title: "Motoröle und Getriebeöle", text: "Optimaler Schutz vor Verschleiß, Korrosion und Ablagerungen für höchste Motorleistung." },
@@ -13,7 +14,7 @@ const Schmierstoffe = () => (
   <ProductPageTemplate
     title="Schmierstoffe & Kompressoröle"
     subtitle="Optimale Leistung und Öl-Freigabe"
-    heroImage="/images/Filter-Slider-scheu-5-Spezialschmierstoffe-2024.jpg"
+    heroImage={productImages.schmierstoffe}
     intro="Schmierstoffe sind das Herzstück jeder Maschine. Sie sichern Funktionalität, Effizienz und Anlagenlebensdauer. Eine Öl-Freigabe ist die offizielle Bestätigung, dass ein Schmierstoff die spezifischen Anforderungen eines Maschinenherstellers erfüllt oder übertrifft."
     cartItem={{ id: "schmierstoffe", name: "Schmierstoffe & Kompressoröle", category: "Produkte" }}
   >

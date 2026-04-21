@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const pillars = [
   {
@@ -27,7 +28,7 @@ const Hautschutz = () => (
   <ProductPageTemplate
     title="Hautschutzprogramm"
     subtitle="Schutz – Reinigung – Pflege"
-    heroImage="/images/Filter-Slider-scheu-12-Hautschutzprogramm-2024.jpg"
+    heroImage={productImages.hautschutz}
     intro="Tägliche Hautbelastung durch schädliche Substanzen in Handwerk und Industrie erfordert professionellen Hautschutz. Unser 3-Säulen-Programm bietet optimale Hautverträglichkeit bei bestem Kosten-Nutzen-Verhältnis."
     cartItem={{ id: "hautschutz", name: "Hautschutzprogramm", category: "Produkte" }}
   >

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const categories = [
   { title: "Motorenöle", text: "Synthetische, teilsynthetische und mineralische Motorenöle für maximale Leistung mit optimalem Verschleiß- und Korrosionsschutz." },
@@ -12,7 +13,7 @@ const Automotive = () => (
   <ProductPageTemplate
     title="Automotive Schmierstoffe"
     subtitle="Hochwertige Produkte für Ihr Fahrzeug"
-    heroImage="/images/Filter-Slider-scheu-11-AutomotiveSchmierstoffe-2024.jpg"
+    heroImage={productImages.automotive}
     intro="Der richtige Schmierstoff ist entscheidend für Fahrzeugleistung und Langlebigkeit. Unser Sortiment deckt PKW, LKW, Motorräder und Landmaschinen ab. Alle Schmierstoffe erfüllen aktuelle Normen und Zertifizierungen."
     cartItem={{ id: "automotive", name: "Automotive Schmierstoffe", category: "Produkte" }}
   >

@@ -1,8 +1,4 @@
 import { Suspense, lazy } from "react";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { InquiryCartProvider } from "@/context/InquiryCartContext";
 
@@ -40,61 +36,53 @@ const Anfrage = lazy(() => import("./pages/Anfrage"));
 const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 
-const queryClient = new QueryClient();
-
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <InquiryCartProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={<div className="min-h-screen bg-background" />}>
-            <Routes>
-              <Route path="/" element={<Index />} />
+  <InquiryCartProvider>
+    <BrowserRouter>
+      <Suspense fallback={<div className="min-h-screen bg-background" />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
 
-              {/* Unternehmen */}
-              <Route path="/unternehmen/leitbild" element={<Leitbild />} />
-              <Route path="/unternehmen/historie" element={<Historie />} />
-              <Route path="/unternehmen/team" element={<Team />} />
-              <Route path="/unternehmen/stellenangebote" element={<Stellenangebote />} />
-              <Route path="/unternehmen/standort-deutschland" element={<StandortDeutschland />} />
-              <Route path="/unternehmen/standort-schweiz" element={<StandortSchweiz />} />
+          {/* Unternehmen */}
+          <Route path="/unternehmen/leitbild" element={<Leitbild />} />
+          <Route path="/unternehmen/historie" element={<Historie />} />
+          <Route path="/unternehmen/team" element={<Team />} />
+          <Route path="/unternehmen/stellenangebote" element={<Stellenangebote />} />
+          <Route path="/unternehmen/standort-deutschland" element={<StandortDeutschland />} />
+          <Route path="/unternehmen/standort-schweiz" element={<StandortSchweiz />} />
 
-              {/* Produkte */}
-              <Route path="/produkte/fluid-management" element={<FluidManagement />} />
-              <Route path="/produkte/kuehlschmierstoffe" element={<Kuehlschmierstoffe />} />
-              <Route path="/produkte/filtrationsprogramm" element={<Filtrationsprogramm />} />
-              <Route path="/produkte/reiniger" element={<Reiniger />} />
-              <Route path="/produkte/korrosionsschutz" element={<Korrosionsschutz />} />
-              <Route path="/produkte/waermebehandlung" element={<Waermebehandlung />} />
-              <Route path="/produkte/gleit-bettbahnoele" element={<GleitBettbahnoele />} />
-              <Route path="/produkte/schmierstoffe" element={<Schmierstoffe />} />
-              <Route path="/produkte/hydraulikoele" element={<Hydraulikoele />} />
-              <Route path="/produkte/fette" element={<Fette />} />
-              <Route path="/produkte/automotive" element={<Automotive />} />
-              <Route path="/produkte/hautschutz" element={<Hautschutz />} />
+          {/* Produkte */}
+          <Route path="/produkte/fluid-management" element={<FluidManagement />} />
+          <Route path="/produkte/kuehlschmierstoffe" element={<Kuehlschmierstoffe />} />
+          <Route path="/produkte/filtrationsprogramm" element={<Filtrationsprogramm />} />
+          <Route path="/produkte/reiniger" element={<Reiniger />} />
+          <Route path="/produkte/korrosionsschutz" element={<Korrosionsschutz />} />
+          <Route path="/produkte/waermebehandlung" element={<Waermebehandlung />} />
+          <Route path="/produkte/gleit-bettbahnoele" element={<GleitBettbahnoele />} />
+          <Route path="/produkte/schmierstoffe" element={<Schmierstoffe />} />
+          <Route path="/produkte/hydraulikoele" element={<Hydraulikoele />} />
+          <Route path="/produkte/fette" element={<Fette />} />
+          <Route path="/produkte/automotive" element={<Automotive />} />
+          <Route path="/produkte/hautschutz" element={<Hautschutz />} />
 
-              {/* Service */}
-              <Route path="/service/fluid-management" element={<FluidManagementService />} />
-              <Route path="/service/kss-management" element={<KSSManagement />} />
-              <Route path="/service/kss-probleme" element={<KSSProbleme />} />
+          {/* Service */}
+          <Route path="/service/fluid-management" element={<FluidManagementService />} />
+          <Route path="/service/kss-management" element={<KSSManagement />} />
+          <Route path="/service/kss-probleme" element={<KSSProbleme />} />
 
-              {/* Sonstige */}
-              <Route path="/zertifikate" element={<Zertifikate />} />
-              <Route path="/kontakt" element={<Kontakt />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/anfrage" element={<Anfrage />} />
-              <Route path="/impressum" element={<Impressum />} />
-              <Route path="/datenschutz" element={<Datenschutz />} />
+          {/* Sonstige */}
+          <Route path="/zertifikate" element={<Zertifikate />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/anfrage" element={<Anfrage />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
 
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </InquiryCartProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  </InquiryCartProvider>
 );
 
 export default App;

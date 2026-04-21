@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const features = [
   { title: "Wassermischbare KSS", text: "Stabile Emulsionen für Zerspanung und Schleifen. Optimale Kühlung und Schmierung für beste Oberflächengüten." },
@@ -15,7 +16,7 @@ const Kuehlschmierstoffe = () => (
   <ProductPageTemplate
     title="Kühlschmierstoffe (KSS)"
     subtitle="Wassermischbar & nicht wassermischbar"
-    heroImage="/images/Filter-Slider-scheu-1-wmb-kss-2024.jpg"
+    heroImage={productImages.kuehlschmierstoffe}
     intro="Die Wahl des richtigen Kühlschmierstoffs ist entscheidend für die Bearbeitungsqualität und Werkzeugstandzeiten. KSS erfüllen mehrere Funktionen: Reibungsreduzierung, Späneableitung, Korrosionsschutz und Beeinflussung der Oberflächengüte."
     cartItem={{ id: "kuehlschmierstoffe", name: "Kühlschmierstoffe", category: "Produkte" }}
   >

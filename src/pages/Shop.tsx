@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import { ShoppingCart, Check, Search, Filter, ArrowRight } from "lucide-react";
 import { useInquiryCart, CartItem } from "@/context/InquiryCartContext";
 import { fadeUp } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 interface Product {
   id: string;
@@ -17,18 +18,18 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: "fluid-management", name: "Fluid-Management", category: "Service & Dienstleistungen", description: "Biobalance-System, Monitoring, Filtrations-Beratung und KSS Management 4.0.", image: "/images/Filter-Slider-scheu-13-Fluid_Management-2024.jpg", link: "/produkte/fluid-management" },
-  { id: "kuehlschmierstoffe", name: "Kühlschmierstoffe (KSS)", category: "Kühlschmierstoffe", description: "Wassermischbare und nicht wassermischbare KSS für die Metallbearbeitung.", image: "/images/Filter-Slider-scheu-1-wmb-kss-2024.jpg", link: "/produkte/kuehlschmierstoffe" },
-  { id: "filtration", name: "Filtrationsprogramm", category: "Filtration", description: "EcoFleece, TopFleece, Filterbeutel, Filterkerzen und komplette Filteranlagen.", image: "/images/Filter-Slider-scheu-3-4D-Filtervlies-2024.jpg", link: "/produkte/filtrationsprogramm" },
-  { id: "reiniger", name: "Reiniger", category: "Prozesschemie", description: "Kohlenwasserstoffreiniger und wässrige Reiniger für die industrielle Reinigung.", image: "/images/Filter-Slider-scheu-4-Reiniger.jpg", link: "/produkte/reiniger" },
-  { id: "korrosionsschutz", name: "Korrosionsschutz", category: "Prozesschemie", description: "Hochwirksame Lösungen für den Korrosionsschutz von Stahl und anderen Metallen.", image: "/images/Filter-Slider-scheu-6-Korresionsschutz-2024.jpg", link: "/produkte/korrosionsschutz" },
-  { id: "waermebehandlung", name: "Wärmebehandlung", category: "Spezialprodukte", description: "Nitriersalze, Härtesalze, Anlassen & Glühen, Boriersalze und Reinigungssalze.", image: "/images/Filter-Slider-scheu-7-Haerteoele-2024.jpg", link: "/produkte/waermebehandlung" },
-  { id: "gleit-bettbahnoele", name: "Gleit- & Bettbahnöle", category: "Industrieöle", description: "CGLP ISO-VG 32 bis 220 für Werkzeugmaschinen und Produktionsanlagen.", image: "/images/Filter-Slider-scheu-8-Bettbahnoele-2024.jpg", link: "/produkte/gleit-bettbahnoele" },
-  { id: "schmierstoffe", name: "Schmierstoffe & Kompressoröle", category: "Industrieöle", description: "Motoröle, Getriebeöle, Industrieöle und Spezialschmierstoffe mit Öl-Freigabe.", image: "/images/Filter-Slider-scheu-5-Spezialschmierstoffe-2024.jpg", link: "/produkte/schmierstoffe" },
-  { id: "hydraulikoele", name: "Hydrauliköle", category: "Industrieöle", description: "HLP, HLPD, HVLP und HVLPD in allen gängigen Viskositätsgraden.", image: "/images/Filter-Slider-scheu-10-Hydraulikoel-2024.jpg", link: "/produkte/hydraulikoele" },
-  { id: "fette", name: "Fette", category: "Schmierfette", description: "Abschmierfette, Wälzlagerfette und Trennfette für höchste Ansprüche.", image: "/images/Filter-Slider-scheu-14-Fette-2024.jpg", link: "/produkte/fette" },
-  { id: "automotive", name: "Automotive Schmierstoffe", category: "Automotive", description: "Motorenöle, Getriebeöle und Landmaschinenöle für alle Fahrzeugtypen.", image: "/images/Filter-Slider-scheu-11-AutomotiveSchmierstoffe-2024.jpg", link: "/produkte/automotive" },
-  { id: "hautschutz", name: "Hautschutzprogramm", category: "Arbeitsschutz", description: "3-Säulen-Programm: Schutz, Reinigung und Pflege für die Haut am Arbeitsplatz.", image: "/images/Filter-Slider-scheu-12-Hautschutzprogramm-2024.jpg", link: "/produkte/hautschutz" },
+  { id: "fluid-management", name: "Fluid-Management", category: "Service & Dienstleistungen", description: "Biobalance-System, Monitoring, Filtrations-Beratung und KSS Management 4.0.", image: productImages.fluidManagement, link: "/produkte/fluid-management" },
+  { id: "kuehlschmierstoffe", name: "Kühlschmierstoffe (KSS)", category: "Kühlschmierstoffe", description: "Wassermischbare und nicht wassermischbare KSS für die Metallbearbeitung.", image: productImages.kuehlschmierstoffe, link: "/produkte/kuehlschmierstoffe" },
+  { id: "filtration", name: "Filtrationsprogramm", category: "Filtration", description: "EcoFleece, TopFleece, Filterbeutel, Filterkerzen und komplette Filteranlagen.", image: productImages.filtrationsprogramm, link: "/produkte/filtrationsprogramm" },
+  { id: "reiniger", name: "Reiniger", category: "Prozesschemie", description: "Kohlenwasserstoffreiniger und wässrige Reiniger für die industrielle Reinigung.", image: productImages.reiniger, link: "/produkte/reiniger" },
+  { id: "korrosionsschutz", name: "Korrosionsschutz", category: "Prozesschemie", description: "Hochwirksame Lösungen für den Korrosionsschutz von Stahl und anderen Metallen.", image: productImages.korrosionsschutz, link: "/produkte/korrosionsschutz" },
+  { id: "waermebehandlung", name: "Wärmebehandlung", category: "Spezialprodukte", description: "Nitriersalze, Härtesalze, Anlassen & Glühen, Boriersalze und Reinigungssalze.", image: productImages.waermebehandlung, link: "/produkte/waermebehandlung" },
+  { id: "gleit-bettbahnoele", name: "Gleit- & Bettbahnöle", category: "Industrieöle", description: "CGLP ISO-VG 32 bis 220 für Werkzeugmaschinen und Produktionsanlagen.", image: productImages.gleitBettbahnoele, link: "/produkte/gleit-bettbahnoele" },
+  { id: "schmierstoffe", name: "Schmierstoffe & Kompressoröle", category: "Industrieöle", description: "Motoröle, Getriebeöle, Industrieöle und Spezialschmierstoffe mit Öl-Freigabe.", image: productImages.schmierstoffe, link: "/produkte/schmierstoffe" },
+  { id: "hydraulikoele", name: "Hydrauliköle", category: "Industrieöle", description: "HLP, HLPD, HVLP und HVLPD in allen gängigen Viskositätsgraden.", image: productImages.hydraulikoele, link: "/produkte/hydraulikoele" },
+  { id: "fette", name: "Fette", category: "Schmierfette", description: "Abschmierfette, Wälzlagerfette und Trennfette für höchste Ansprüche.", image: productImages.fette, link: "/produkte/fette" },
+  { id: "automotive", name: "Automotive Schmierstoffe", category: "Automotive", description: "Motorenöle, Getriebeöle und Landmaschinenöle für alle Fahrzeugtypen.", image: productImages.automotive, link: "/produkte/automotive" },
+  { id: "hautschutz", name: "Hautschutzprogramm", category: "Arbeitsschutz", description: "3-Säulen-Programm: Schutz, Reinigung und Pflege für die Haut am Arbeitsplatz.", image: productImages.hautschutz, link: "/produkte/hautschutz" },
 ];
 
 const categories = [...new Set(products.map((p) => p.category))];
@@ -46,7 +47,12 @@ const Shop = () => {
 
   const toggleCart = (p: Product) => {
     const item: CartItem = { id: p.id, name: p.name, category: p.category, image: p.image };
-    isInCart(p.id) ? removeItem(p.id) : addItem(item);
+    if (isInCart(p.id)) {
+      removeItem(p.id);
+      return;
+    }
+
+    addItem(item);
   };
 
   return (
@@ -75,22 +81,22 @@ const Shop = () => {
             <div>
               <label className="block text-sm font-medium mb-1.5">Filter</label>
               <div className="flex items-center gap-2 flex-wrap">
-              <Filter className="w-4 h-4 text-muted-foreground" />
-              <button
-                onClick={() => setActiveCategory(null)}
-                className={`px-3 py-1.5 text-xs font-medium transition-colors ${!activeCategory ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
-              >
-                Alle
-              </button>
-              {categories.map((cat) => (
+                <Filter className="w-4 h-4 text-muted-foreground" />
                 <button
-                  key={cat}
-                  onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
-                  className={`px-3 py-1.5 text-xs font-medium transition-colors ${activeCategory === cat ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                  onClick={() => setActiveCategory(null)}
+                  className={`px-3 py-1.5 text-xs font-medium transition-colors ${!activeCategory ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
                 >
-                  {cat}
+                  Alle
                 </button>
-              ))}
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
+                    className={`px-3 py-1.5 text-xs font-medium transition-colors ${activeCategory === cat ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                  >
+                    {cat}
+                  </button>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -135,6 +141,8 @@ const Shop = () => {
                       <img
                         src={p.image}
                         alt={p.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>

@@ -6,11 +6,12 @@ import PageHero from "@/components/PageHero";
 import { useInquiryCart } from "@/context/InquiryCartContext";
 import { Trash2, ShoppingCart, Send, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { fadeUp, fadeLeft, fadeRight } from "@/lib/animations";
+import { createInquiryDraftHref } from "@/lib/mailto";
 
 const Anfrage = () => {
   const { items, removeItem, clearCart, itemCount } = useInquiryCart();
   const [form, setForm] = useState({ company: "", name: "", email: "", phone: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [draftOpened, setDraftOpened] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,31 +19,9 @@ const Anfrage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setDraftOpened(true);
+    window.location.href = createInquiryDraftHref({ ...form, items });
   };
-
-  if (submitted) {
-    return (
-      <PageLayout>
-        <PageHero title="Anfrage gesendet" subtitle="Vielen Dank für Ihre Anfrage" />
-        <section className="pt-8 pb-16 md:py-24">
-          <div className="container mx-auto px-4 lg:px-8">
-            <motion.div initial="hidden" animate="show" variants={fadeUp} className="bg-green-50 border border-green-200 p-6 sm:p-10 max-w-2xl">
-              <CheckCircle2 className="w-12 h-12 text-green-600 mb-6" />
-              <h2 className="font-heading text-2xl font-bold text-green-900 mb-4">Vielen Dank!</h2>
-              <p className="text-green-700 mb-2">
-                Wir haben Ihre Anfrage mit {itemCount} {itemCount === 1 ? "Produkt" : "Produkten"} erhalten.
-              </p>
-              <p className="text-green-700 mb-8">Unser Team wird sich schnellstmöglich bei Ihnen melden.</p>
-              <Link to="/shop" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90 transition-colors">
-                Zurück zum Katalog
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-      </PageLayout>
-    );
-  }
 
   return (
     <PageLayout>
@@ -79,7 +58,15 @@ const Anfrage = () => {
                         layout
                         className="flex items-center gap-4 bg-surface p-3 border border-border/50"
                       >
-                        {item.image && <img src={item.image} alt={item.name} className="w-16 h-12 object-cover shrink-0" />}
+                        {item.image && (
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-12 w-16 shrink-0 object-cover"
+                          />
+                        )}
                         <div className="flex-1 min-w-0">
                           <p className="font-semibold text-sm truncate">{item.name}</p>
                           <p className="text-xs text-muted-foreground">{item.category}</p>
@@ -121,8 +108,21 @@ const Anfrage = () => {
                       <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder="Optionale Anmerkungen..." className="w-full border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none" />
                     </div>
                     <button type="submit" className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary/90 transition-colors">
-                      <Send className="w-4 h-4" /> Anfrage absenden
+                      <Send className="w-4 h-4" /> Anfrage per E-Mail vorbereiten
                     </button>
+                    <p className="text-xs text-muted-foreground">
+                      Wir öffnen Ihr Mailprogramm mit einer vorausgefüllten Anfrage an{" "}
+                      <a href="mailto:info@oelscheu.de" className="font-medium text-foreground hover:text-primary transition-colors">
+                        info@oelscheu.de
+                      </a>
+                      .
+                    </p>
+                    {draftOpened && (
+                      <div className="flex items-start gap-2 rounded-md border border-green-200 bg-green-50 px-3 py-2 text-sm text-green-800">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
+                        <p>Falls sich kein Mailprogramm geöffnet hat, senden Sie Ihre Anfrage direkt an info@oelscheu.de.</p>
+                      </div>
+                    )}
                   </form>
                 </div>
               </motion.div>

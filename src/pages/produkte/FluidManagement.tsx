@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ProductPageTemplate from "@/components/ProductPageTemplate";
 import { staggerContainer, fadeUpCard } from "@/lib/animations";
+import { productImages } from "@/lib/product-images";
 
 const features = [
   { title: "Biobalance-System", text: "Ein koordiniertes Gerätesystem, das Kühlschmierstoffe in optimaler, gesunder Balance hält und produktionsgerechte Qualität garantiert." },
@@ -14,7 +15,7 @@ const FluidManagement = () => (
   <ProductPageTemplate
     title="Fluid-Management"
     subtitle="Service & Dienstleistungen"
-    heroImage="/images/Filter-Slider-scheu-13-Fluid_Management-2024.jpg"
+    heroImage={productImages.fluidManagement}
     intro="Fluidmanagement mit Biobalance! Ein koordiniertes Gerätesystem hält Ihre Kühlschmierstoffe in optimaler Balance für Ihre Produktion."
     cartItem={{ id: "fluid-management", name: "Fluid-Management", category: "Produkte" }}
   >
