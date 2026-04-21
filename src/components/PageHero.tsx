@@ -39,13 +39,14 @@ const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
         )}
       </div>
     </section>
-    <div className="relative -mt-[1px] bg-industrial">
+    <div className="relative -mt-[1px] overflow-hidden bg-industrial leading-[0]">
       <svg
-        viewBox="0 0 1440 60"
-        className="w-full h-auto block"
+        viewBox="0 0 1440 62"
+        className="block h-4 w-full sm:h-6 md:h-8 lg:h-10 xl:h-14 2xl:h-16"
         preserveAspectRatio="none"
+        aria-hidden="true"
       >
-        <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="white" />
+        <path d="M0,60 C360,0 1080,0 1440,60 L1440,62 L0,62 Z" fill="white" />
       </svg>
     </div>
   </>
