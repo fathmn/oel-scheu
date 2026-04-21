@@ -79,7 +79,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-background/95 backdrop-blur-md md:border-border">
       <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={logo} alt="Oel-Scheu GmbH" className="h-14 w-auto" />
