@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/optimized/logo.webp";
 
 const Footer = () => (
   <footer className="bg-industrial border-t-0 py-14">
@@ -146,7 +146,15 @@ const Footer = () => (
 
       <div className="border-t border-industrial-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <Link to="/">
-          <img src={logo} alt="Oel-Scheu GmbH" className="h-8 w-auto opacity-70" />
+          <img
+            src={logo}
+            alt="Oel-Scheu GmbH"
+            width={563}
+            height={235}
+            loading="lazy"
+            decoding="async"
+            className="h-8 w-auto opacity-70"
+          />
         </Link>
         <p className="text-xs text-industrial-foreground/40">
           © {new Date().getFullYear()} Oel-Scheu GmbH. Alle Rechte vorbehalten.

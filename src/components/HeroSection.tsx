@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/optimized/hero-bg.webp";
 
 const usps = [
   "Technische Beratung statt reiner Produktlieferung",
@@ -15,6 +15,11 @@ const HeroSection = () => (
       <img
         src={heroBg}
         alt=""
+        width={1920}
+        height={1088}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
         className="w-full h-full object-cover object-center"
       />
       {/* Lighter overlay so image shines through */}

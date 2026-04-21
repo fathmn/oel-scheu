@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Handshake } from "lucide-react";
-import trucksImg from "@/assets/trucks.png";
+import trucksImg from "@/assets/optimized/trucks.webp";
 
 const Testimonials = () => (
   <section className="py-10 md:py-20 lg:py-28">
@@ -31,6 +31,11 @@ const Testimonials = () => (
           <img
             src={trucksImg}
             alt="Oel-Scheu Lieferfahrzeuge"
+            width={440}
+            height={298}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="w-full h-auto object-cover rounded-xl"
           />
         </motion.div>

@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,38 +7,38 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { InquiryCartProvider } from "@/context/InquiryCartContext";
 
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-import Leitbild from "./pages/unternehmen/Leitbild";
-import Historie from "./pages/unternehmen/Historie";
-import Team from "./pages/unternehmen/Team";
-import Stellenangebote from "./pages/unternehmen/Stellenangebote";
-import StandortDeutschland from "./pages/unternehmen/StandortDeutschland";
-import StandortSchweiz from "./pages/unternehmen/StandortSchweiz";
+const Leitbild = lazy(() => import("./pages/unternehmen/Leitbild"));
+const Historie = lazy(() => import("./pages/unternehmen/Historie"));
+const Team = lazy(() => import("./pages/unternehmen/Team"));
+const Stellenangebote = lazy(() => import("./pages/unternehmen/Stellenangebote"));
+const StandortDeutschland = lazy(() => import("./pages/unternehmen/StandortDeutschland"));
+const StandortSchweiz = lazy(() => import("./pages/unternehmen/StandortSchweiz"));
 
-import FluidManagement from "./pages/produkte/FluidManagement";
-import Kuehlschmierstoffe from "./pages/produkte/Kuehlschmierstoffe";
-import Filtrationsprogramm from "./pages/produkte/Filtrationsprogramm";
-import Reiniger from "./pages/produkte/Reiniger";
-import Korrosionsschutz from "./pages/produkte/Korrosionsschutz";
-import Waermebehandlung from "./pages/produkte/Waermebehandlung";
-import GleitBettbahnoele from "./pages/produkte/GleitBettbahnoele";
-import Schmierstoffe from "./pages/produkte/Schmierstoffe";
-import Hydraulikoele from "./pages/produkte/Hydraulikoele";
-import Fette from "./pages/produkte/Fette";
-import Automotive from "./pages/produkte/Automotive";
-import Hautschutz from "./pages/produkte/Hautschutz";
+const FluidManagement = lazy(() => import("./pages/produkte/FluidManagement"));
+const Kuehlschmierstoffe = lazy(() => import("./pages/produkte/Kuehlschmierstoffe"));
+const Filtrationsprogramm = lazy(() => import("./pages/produkte/Filtrationsprogramm"));
+const Reiniger = lazy(() => import("./pages/produkte/Reiniger"));
+const Korrosionsschutz = lazy(() => import("./pages/produkte/Korrosionsschutz"));
+const Waermebehandlung = lazy(() => import("./pages/produkte/Waermebehandlung"));
+const GleitBettbahnoele = lazy(() => import("./pages/produkte/GleitBettbahnoele"));
+const Schmierstoffe = lazy(() => import("./pages/produkte/Schmierstoffe"));
+const Hydraulikoele = lazy(() => import("./pages/produkte/Hydraulikoele"));
+const Fette = lazy(() => import("./pages/produkte/Fette"));
+const Automotive = lazy(() => import("./pages/produkte/Automotive"));
+const Hautschutz = lazy(() => import("./pages/produkte/Hautschutz"));
 
-import FluidManagementService from "./pages/service/FluidManagementService";
-import KSSManagement from "./pages/service/KSSManagement";
-import KSSProbleme from "./pages/service/KSSProbleme";
+const FluidManagementService = lazy(() => import("./pages/service/FluidManagementService"));
+const KSSManagement = lazy(() => import("./pages/service/KSSManagement"));
+const KSSProbleme = lazy(() => import("./pages/service/KSSProbleme"));
 
-import Zertifikate from "./pages/Zertifikate";
-import Kontakt from "./pages/Kontakt";
-import Shop from "./pages/Shop";
-import Anfrage from "./pages/Anfrage";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
+const Zertifikate = lazy(() => import("./pages/Zertifikate"));
+const Kontakt = lazy(() => import("./pages/Kontakt"));
+const Shop = lazy(() => import("./pages/Shop"));
+const Anfrage = lazy(() => import("./pages/Anfrage"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 
 const queryClient = new QueryClient();
 
@@ -48,46 +49,48 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
+          <Suspense fallback={<div className="min-h-screen bg-background" />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
 
-            {/* Unternehmen */}
-            <Route path="/unternehmen/leitbild" element={<Leitbild />} />
-            <Route path="/unternehmen/historie" element={<Historie />} />
-            <Route path="/unternehmen/team" element={<Team />} />
-            <Route path="/unternehmen/stellenangebote" element={<Stellenangebote />} />
-            <Route path="/unternehmen/standort-deutschland" element={<StandortDeutschland />} />
-            <Route path="/unternehmen/standort-schweiz" element={<StandortSchweiz />} />
+              {/* Unternehmen */}
+              <Route path="/unternehmen/leitbild" element={<Leitbild />} />
+              <Route path="/unternehmen/historie" element={<Historie />} />
+              <Route path="/unternehmen/team" element={<Team />} />
+              <Route path="/unternehmen/stellenangebote" element={<Stellenangebote />} />
+              <Route path="/unternehmen/standort-deutschland" element={<StandortDeutschland />} />
+              <Route path="/unternehmen/standort-schweiz" element={<StandortSchweiz />} />
 
-            {/* Produkte */}
-            <Route path="/produkte/fluid-management" element={<FluidManagement />} />
-            <Route path="/produkte/kuehlschmierstoffe" element={<Kuehlschmierstoffe />} />
-            <Route path="/produkte/filtrationsprogramm" element={<Filtrationsprogramm />} />
-            <Route path="/produkte/reiniger" element={<Reiniger />} />
-            <Route path="/produkte/korrosionsschutz" element={<Korrosionsschutz />} />
-            <Route path="/produkte/waermebehandlung" element={<Waermebehandlung />} />
-            <Route path="/produkte/gleit-bettbahnoele" element={<GleitBettbahnoele />} />
-            <Route path="/produkte/schmierstoffe" element={<Schmierstoffe />} />
-            <Route path="/produkte/hydraulikoele" element={<Hydraulikoele />} />
-            <Route path="/produkte/fette" element={<Fette />} />
-            <Route path="/produkte/automotive" element={<Automotive />} />
-            <Route path="/produkte/hautschutz" element={<Hautschutz />} />
+              {/* Produkte */}
+              <Route path="/produkte/fluid-management" element={<FluidManagement />} />
+              <Route path="/produkte/kuehlschmierstoffe" element={<Kuehlschmierstoffe />} />
+              <Route path="/produkte/filtrationsprogramm" element={<Filtrationsprogramm />} />
+              <Route path="/produkte/reiniger" element={<Reiniger />} />
+              <Route path="/produkte/korrosionsschutz" element={<Korrosionsschutz />} />
+              <Route path="/produkte/waermebehandlung" element={<Waermebehandlung />} />
+              <Route path="/produkte/gleit-bettbahnoele" element={<GleitBettbahnoele />} />
+              <Route path="/produkte/schmierstoffe" element={<Schmierstoffe />} />
+              <Route path="/produkte/hydraulikoele" element={<Hydraulikoele />} />
+              <Route path="/produkte/fette" element={<Fette />} />
+              <Route path="/produkte/automotive" element={<Automotive />} />
+              <Route path="/produkte/hautschutz" element={<Hautschutz />} />
 
-            {/* Service */}
-            <Route path="/service/fluid-management" element={<FluidManagementService />} />
-            <Route path="/service/kss-management" element={<KSSManagement />} />
-            <Route path="/service/kss-probleme" element={<KSSProbleme />} />
+              {/* Service */}
+              <Route path="/service/fluid-management" element={<FluidManagementService />} />
+              <Route path="/service/kss-management" element={<KSSManagement />} />
+              <Route path="/service/kss-probleme" element={<KSSProbleme />} />
 
-            {/* Sonstige */}
-            <Route path="/zertifikate" element={<Zertifikate />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/anfrage" element={<Anfrage />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/datenschutz" element={<Datenschutz />} />
+              {/* Sonstige */}
+              <Route path="/zertifikate" element={<Zertifikate />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/anfrage" element={<Anfrage />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </InquiryCartProvider>
     </TooltipProvider>

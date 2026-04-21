@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, ShoppingCart } from "lucide-react";
 import { useInquiryCart } from "@/context/InquiryCartContext";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/optimized/logo.webp";
 
 interface NavItem {
   label: string;
@@ -82,7 +82,16 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-background/95 backdrop-blur-md md:border-border">
       <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="Oel-Scheu GmbH" className="h-14 w-auto" />
+          <img
+            src={logo}
+            alt="Oel-Scheu GmbH"
+            width={563}
+            height={235}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="h-14 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}

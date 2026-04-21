@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import beratungImg from "@/assets/beratung.jpg";
+import beratungImg from "@/assets/optimized/beratung.webp";
 
 const steps = [
   {
@@ -38,7 +38,16 @@ const ProcessSection = () => (
   <section id="ablauf" className="bg-industrial py-10 md:py-20 lg:py-28 relative overflow-hidden">
     {/* Background image overlay */}
     <div className="absolute inset-0 z-0">
-      <img src={beratungImg} alt="" className="w-full h-full object-cover opacity-10" />
+      <img
+        src={beratungImg}
+        alt=""
+        width={1024}
+        height={1024}
+        loading="lazy"
+        decoding="async"
+        fetchPriority="low"
+        className="w-full h-full object-cover opacity-10"
+      />
     </div>
     <div className="container relative z-10 mx-auto px-4 lg:px-8">
       <motion.div

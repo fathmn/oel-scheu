@@ -42,6 +42,11 @@ const FluidWave = ({
         transform: flip ? "scaleY(-1)" : undefined,
       }}
     >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{ backgroundColor: fromColor }}
+      />
       <svg
         viewBox="0 0 1440 122"
         preserveAspectRatio="none"
@@ -76,6 +81,11 @@ const FluidWave = ({
           fill={toColor}
         />
       </svg>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px]"
+        style={{ backgroundColor: toColor }}
+      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplets, Shield, Beaker, FlaskConical, Users, ArrowRight } from "lucide-react";
-import kssImg from "@/assets/kss-detail.jpg";
+import kssImg from "@/assets/optimized/kss-detail.webp";
 
 const features = [
   {
@@ -41,7 +41,16 @@ const KSSDetailSection = () => (
           viewport={{ once: true }}
           className="mb-12 rounded-2xl overflow-hidden"
         >
-          <img src={kssImg} alt="CNC-Maschine mit Kühlschmierstoff" className="w-full h-64 md:h-80 object-cover" />
+          <img
+            src={kssImg}
+            alt="CNC-Maschine mit Kühlschmierstoff"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="w-full h-64 md:h-80 object-cover"
+          />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">

@@ -71,8 +71,13 @@ const Team = () => (
         >
           <div className="grid lg:grid-cols-[1.3fr_1fr] gap-8 items-end">
             <img
-              src="/images/Team-Wolfgang-und-Lukas-Scheu.jpg"
+              src="/images/optimized/team-wolfgang-lukas.webp"
               alt="Wolfgang und Lukas Scheu"
+              width={1200}
+              height={798}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="w-full rounded-sm"
             />
             <div>

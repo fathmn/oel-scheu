@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Handshake, Package, Lightbulb, BookOpen, Truck } from "lucide-react";
-import lagerImg from "@/assets/lager.jpg";
+import lagerImg from "@/assets/optimized/lager.webp";
 
 const values = [
   {
@@ -83,7 +83,16 @@ const CompanyValuesSection = () => (
         viewport={{ once: true }}
         className="mt-14 rounded-2xl overflow-hidden"
       >
-        <img src={lagerImg} alt="Oel-Scheu Lagerhalle mit Schmierstoff-Fässern" className="w-full h-56 md:h-72 object-cover" />
+        <img
+          src={lagerImg}
+          alt="Oel-Scheu Lagerhalle mit Schmierstoff-Fässern"
+          width={1024}
+          height={1024}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="w-full h-56 md:h-72 object-cover"
+        />
       </motion.div>
     </div>
   </section>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone as PhoneIcon, Mail, Clock } from "lucide-react";
-import teamImg from "@/assets/team.png";
-import facilityImg from "@/assets/facility.png";
+import teamImg from "@/assets/optimized/team.webp";
+import facilityImg from "@/assets/optimized/facility.webp";
 
 const AboutSection = () => (
   <section id="ueber-uns" className="py-10 md:py-20 lg:py-28 bg-surface">
@@ -65,11 +65,21 @@ const AboutSection = () => (
           <img
             src={teamImg}
             alt="Oel-Scheu Team"
+            width={1200}
+            height={798}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="w-full rounded-xl object-cover"
           />
           <img
             src={facilityImg}
             alt="Oel-Scheu Standort"
+            width={960}
+            height={298}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="w-full rounded-xl object-cover"
           />
         </motion.div>

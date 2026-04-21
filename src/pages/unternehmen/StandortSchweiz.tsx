@@ -12,8 +12,13 @@ const StandortSchweiz = () => (
         <div className="grid md:grid-cols-[auto_1fr] gap-12">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeLeft} className="md:w-[360px]">
             <img
-              src="/images/OelScheu-Vertriebspartner-Bild.jpg"
+              src="/images/optimized/vertriebspartner.webp"
               alt="Oel-Scheu Vertriebspartner GmbH Schweiz"
+              width={290}
+              height={161}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="w-full rounded-sm"
             />
           </motion.div>
@@ -59,8 +64,26 @@ const StandortSchweiz = () => (
         >
           <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-8">Unsere Partner</h3>
           <div className="flex items-center gap-6 md:gap-12 flex-wrap">
-            <img src="/images/MFS-Logo.png" alt="Master Fluid Solutions" className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/HEF_DURFERRIT-Logo.png" alt="hef durferrit" className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" />
+            <img
+              src="/images/optimized/mfs-logo.webp"
+              alt="Master Fluid Solutions"
+              width={800}
+              height={233}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            />
+            <img
+              src="/images/optimized/hef-durferrit-logo.webp"
+              alt="hef durferrit"
+              width={800}
+              height={299}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            />
           </div>
         </motion.div>
       </div>

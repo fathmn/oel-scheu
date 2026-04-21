@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Activity, Gauge, RefreshCw, ShieldCheck, Wrench, ArrowRight } from "lucide-react";
-import fluidImg from "@/assets/fluid-management.jpg";
+import fluidImg from "@/assets/optimized/fluid-management.webp";
 
 const benefits = [
   { icon: Activity, text: "Biobalance-System für konstante KSS-Qualität" },
@@ -36,6 +36,11 @@ const FluidManagementSection = () => (
             <img
               src={fluidImg}
               alt="Oel-Scheu Logistik und Service"
+              width={1024}
+              height={1024}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               className="w-full rounded-2xl object-cover relative z-10"
             />
             <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl z-20 font-semibold text-sm shadow-lg">

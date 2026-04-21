@@ -15,8 +15,13 @@ const StandortDeutschland = () => (
           <div className="grid lg:grid-cols-[1fr_320px] gap-4">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeLeft}>
               <img
-                src="/images/panorama.jpg"
+                src="/images/optimized/panorama.webp"
                 alt="Oel-Scheu Standort Pfalzgrafenweiler"
+                width={440}
+                height={298}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 className="w-full rounded-sm"
               />
               <p className="text-xs text-muted-foreground mt-2">
@@ -32,10 +37,28 @@ const StandortDeutschland = () => (
               className="flex flex-col gap-4"
             >
               <div className="flex-1">
-                <img src="/images/schmierstoffgaslager.jpg" alt="Schmierstoff- und Gaslager" className="w-full h-full object-cover rounded-sm" />
+                <img
+                  src="/images/optimized/schmierstoffgaslager.webp"
+                  alt="Schmierstoff- und Gaslager"
+                  width={960}
+                  height={298}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  className="w-full h-full object-cover rounded-sm"
+                />
               </div>
               <div>
-                <img src="/images/fuhrpark.jpg" alt="Fuhrpark" className="w-full rounded-sm" />
+                <img
+                  src="/images/optimized/fuhrpark.webp"
+                  alt="Fuhrpark"
+                  width={440}
+                  height={298}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                  className="w-full rounded-sm"
+                />
                 <p className="text-xs text-muted-foreground mt-1.5">Unser Fuhrpark</p>
               </div>
             </motion.div>
@@ -85,7 +108,16 @@ const StandortDeutschland = () => (
                 </div>
               </div>
             </div>
-            <img src="/images/Standort-Zobel-1-1.jpg" alt="Lager Wetter (Ruhr)" className="w-full md:w-[280px] rounded-sm" />
+            <img
+              src="/images/optimized/standort-zobel.webp"
+              alt="Lager Wetter (Ruhr)"
+              width={288}
+              height={159}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="w-full md:w-[280px] rounded-sm"
+            />
           </div>
         </motion.div>
 
@@ -99,8 +131,26 @@ const StandortDeutschland = () => (
         >
           <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-8">Unsere Partner</h3>
           <div className="flex items-center gap-6 md:gap-12 flex-wrap">
-            <img src="/images/MFS-Logo.png" alt="Master Fluid Solutions" className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" />
-            <img src="/images/HEF_DURFERRIT-Logo.png" alt="hef durferrit" className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" />
+            <img
+              src="/images/optimized/mfs-logo.webp"
+              alt="Master Fluid Solutions"
+              width={800}
+              height={233}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            />
+            <img
+              src="/images/optimized/hef-durferrit-logo.webp"
+              alt="hef durferrit"
+              width={800}
+              height={299}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+            />
           </div>
         </motion.div>
       </div>

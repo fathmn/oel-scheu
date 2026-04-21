@@ -11,7 +11,14 @@ const PageHero = ({ title, subtitle, image }: PageHeroProps) => (
     <section className="relative bg-industrial overflow-hidden min-h-[180px] md:min-h-[340px] flex items-center">
       {image && (
         <div className="absolute inset-0">
-          <img src={image} alt="" className="w-full h-full object-cover opacity-20" />
+          <img
+            src={image}
+            alt=""
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="w-full h-full object-cover opacity-20"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-industrial via-industrial/80 to-industrial/40" />
         </div>
       )}
