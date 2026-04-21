@@ -36,16 +36,17 @@ const FluidWave = ({
 
   return (
     <div
-      className={`w-full overflow-hidden leading-[0] relative z-10 -mt-px ${className}`}
+      className={`relative z-10 -mt-px -mb-px w-full overflow-hidden leading-[0] ${className}`}
       style={{
         backgroundColor: fromColor,
         transform: flip ? "scaleY(-1)" : undefined,
       }}
     >
       <svg
-        viewBox="0 0 1440 120"
+        viewBox="0 0 1440 122"
         preserveAspectRatio="none"
-        className={`w-full ${sizeMap[size]}`}
+        className={`block w-full ${sizeMap[size]}`}
+        aria-hidden="true"
       >
         {accent && (
           <defs>
@@ -60,18 +61,18 @@ const FluidWave = ({
         )}
         {/* Back layer */}
         <path
-          d="M0,80 C120,45 240,85 360,62 C480,38 600,78 720,68 C840,58 960,35 1080,52 C1200,68 1320,42 1440,58 L1440,120 L0,120 Z"
+          d="M0,80 C120,45 240,85 360,62 C480,38 600,78 720,68 C840,58 960,35 1080,52 C1200,68 1320,42 1440,58 L1440,122 L0,122 Z"
           fill={toColor}
           opacity="0.45"
         />
         {/* Mid layer */}
         <path
-          d="M0,88 C180,52 300,98 480,72 C660,44 780,88 960,74 C1140,58 1260,42 1440,68 L1440,120 L0,120 Z"
+          d="M0,88 C180,52 300,98 480,72 C660,44 780,88 960,74 C1140,58 1260,42 1440,68 L1440,122 L0,122 Z"
           fill={accent ? `url(#${id})` : toColor}
         />
         {/* Front layer */}
         <path
-          d="M0,96 C200,72 400,104 600,86 C800,66 1000,96 1200,82 C1320,74 1400,90 1440,86 L1440,120 L0,120 Z"
+          d="M0,96 C200,72 400,104 600,86 C800,66 1000,96 1200,82 C1320,74 1400,90 1440,86 L1440,122 L0,122 Z"
           fill={toColor}
         />
       </svg>

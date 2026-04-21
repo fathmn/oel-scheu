@@ -24,8 +24,13 @@ const HeroSection = () => (
     {/* Top accent line */}
     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary z-20" />
     {/* Fluid wave built into hero bottom */}
-    <div className="absolute bottom-0 left-0 right-0 z-20">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[80px] md:h-[100px] lg:h-[120px]">
+    <div className="absolute bottom-0 left-0 right-0 z-20 -mb-px overflow-hidden leading-[0]">
+      <svg
+        viewBox="0 0 1440 122"
+        preserveAspectRatio="none"
+        className="block w-full h-[80px] md:h-[100px] lg:h-[120px]"
+        aria-hidden="true"
+      >
         <defs>
           <linearGradient id="hero-oil-grad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#ffffff" />
@@ -35,11 +40,11 @@ const HeroSection = () => (
             <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
         </defs>
-        <path d="M0,80 C120,45 240,85 360,62 C480,38 600,78 720,68 C840,58 960,35 1080,52 C1200,68 1320,42 1440,58 L1440,120 L0,120 Z" fill="#ffffff" opacity="0.45" />
-        <path d="M0,88 C180,52 300,98 480,72 C660,44 780,88 960,74 C1140,58 1260,42 1440,68 L1440,120 L0,120 Z" fill="url(#hero-oil-grad)" />
-        <path d="M0,96 C200,72 400,104 600,86 C800,66 1000,96 1200,82 C1320,74 1400,90 1440,86 L1440,120 L0,120 Z" fill="#ffffff" />
+        <path d="M0,80 C120,45 240,85 360,62 C480,38 600,78 720,68 C840,58 960,35 1080,52 C1200,68 1320,42 1440,58 L1440,122 L0,122 Z" fill="#ffffff" opacity="0.45" />
+        <path d="M0,88 C180,52 300,98 480,72 C660,44 780,88 960,74 C1140,58 1260,42 1440,68 L1440,122 L0,122 Z" fill="url(#hero-oil-grad)" />
+        <path d="M0,96 C200,72 400,104 600,86 C800,66 1000,96 1200,82 C1320,74 1400,90 1440,86 L1440,122 L0,122 Z" fill="#ffffff" />
       </svg>
-      <div className="h-1 bg-white" />
+      <div className="-mt-px h-1 bg-white" />
     </div>
 
     <div className="container relative z-10 mx-auto px-4 lg:px-8 py-12 lg:py-20">
